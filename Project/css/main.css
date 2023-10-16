@@ -1,0 +1,560 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Common Styles for Headers */
+.main-header {
+    background-color: #fff;
+    color: #f7863d;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #0c91d6;
+    outline: 4px solid #f46e3b;
+    max-width: 98%; /* Add this line */
+    margin: 0 auto; /* Center the header horizontally */
+}
+
+
+.main-header .logo,
+.service-header .logo {
+    background-color: #fff;
+    width: 200px;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.main-header .logo img,
+.service-header .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f46e3b;
+    font-weight: bold;
+    border: 2px solid #0c91d6;
+    outline: 2px solid #f46e3b;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f46e3b;
+    color: #fff;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.profile-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Common Styles for Sections */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border: 4px solid #0c91d6;
+    outline: 4px solid #f46e3b;
+    font-family: 'Playfair Display', serif;
+    width: 98%;
+    margin: 1%;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    display: flex; /* Use flexbox to align items side by side */
+    align-items: center; /* Vertically center content */
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+    width: 98%;
+    color: #fff;
+}
+
+.background-gif {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.background-gif img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1px;
+    border: 4px solid #f46e3b;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: center;
+    padding-left: 30px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    background-color: #333;
+    /* Semi-transparent background for description */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 4px solid #0c91d6;
+    outline: 4px solid #f46e3b;
+}
+
+.description h2 {
+    color: #f46e3b;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.description p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.cta-button {
+    background-color: #f46e3b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    /* Center the button horizontally */
+    display: inline-block;
+    border: solid #f46e3b;
+    outline: solid #0c91d6;
+}
+
+.cta-button:hover {
+    background-color: #0c91d6; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+
+
+
+/* About Page */
+.about {
+    text-align: center;
+}
+
+.professionals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+/* Add this to your CSS */
+.about-logo {
+    width: 200px;
+    height: 200px;
+}
+
+/* Logo Container */
+.logo-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.logo-container img {
+    width: 400px;
+    height: 400px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.team-member {
+    width: 300px;
+    min-height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #0c91d6;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: 4px solid #f46e3b;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: outline-color 0.3s;
+}
+
+.team-member:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 4px solid #f46e3b;
+    border-radius: 5px;
+}
+
+.image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    text-align: center;
+    border-right: 3px solid #f46e3b;
+    border-left: 3px solid #f46e3b;
+    border-top: 3px solid #f46e3b;
+    font-family: 'Playfair Display', serif;
+}
+
+.description,
+.descriptions,
+.main-description {
+    border-bottom: 3px solid #f46e3b;
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif;
+    width: auto;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 0;
+    border: 4px solid #f46e3b;
+    outline: 4px solid #0c91d6;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #f46e3b;
+    outline: 3px solid #0c91d6;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #f46e3b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #0c91d6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #0c91d6;
+    color: #f46e3b;
+    text-align: center;
+    padding: 10px 0;
+    border: 4px solid #f46e3b;
+    outline: 4px solid #0c91d6;
+    font-family: 'Playfair Display', serif;
+    clear: both;
+}
+
+/* Service Page Styles */
+.service-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.service-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.service-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Blog Styles */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    border: 4px solid #f46e3b;
+    outline: 4px solid #0c91d6;
+}
+
+.blog-post {
+    width: calc(50% - 40px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border: 4px solid #f46e3b;
+    outline: 4px solid #0c91d6;
+    padding: 30px;
+    text-align: center;
+}
+
+.blog-post img {
+    max-width: 30%;
+    max-height: auto;
+    border: 4px solid #0c91d6;
+    outline: 4px solid #f46e3b;
+}
+
+.blog-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    border: 4px solid #f46e3b;
+    outline: 4px solid #0c91d6;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.blog-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    color: #f46e3b;
+}
+
+.blog-content h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    color: #f46e3b;
+}
+
+.blog-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Photo Gallery Carousel Styles */
+.photo-gallery-carousel {
+    padding: 40px 0;
+}
+
+.photo-gallery-carousel h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Carousel Styles */
+.carousel {
+    max-width: 100%;
+}
+
+.carousel-inner {
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Carousel Control Styles */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #f46e3b;
+    color: #fff;
+}
+
+.carousel-indicators li {
+    background-color: #f46e3b;
+}
+
+.carousel-indicators .active {
+    background-color: #0c91d6;
+}
+
+body {
+    font-family: 'Playfair Display', sans-serif;
+    background-color: #fff; /* Background color of the website */
+    color: #0c91d6; /* Text color of the website */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: 5px solid #0c91d6; 
+    outline: 5px solid #f46e3b/* Border color of the website */
+}
+
+
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+form {
+    font-family: 'Playfair Display', serif;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Background color of the form */
+    border-radius: 0;
+    box-shadow: inset 0 0 10px rgba(243, 107, 72, 0.5);
+    border-width: 2px 4px;
+    border-color: #f04537;
+    outline: solid #0c91d6;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,
+select {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #f04537;
+    outline: 1px solid #0c91d6;
+    border-radius: 0;
+}
+
+/* Style for labels */
+label {
+    text-align: left;
+    font-weight: bold;
+}
+
+button {
+    background-color: #f5793b;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    width: 60%;
+}
+
+button:hover {
+    background-color: #f9a43f;
+    color: #fff;
+}
+
+#result {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+}
+
+.service-radio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.service-radio input[type="radio"] {
+    margin-right: 10px;
+}
+
+.service-radio label {
+    display: flex;
+    align-items: center;
+}
