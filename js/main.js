@@ -40,16 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Load content for each section
-    loadContent("/main/sections/header.html", "header");
-    loadContent("/main/sections/hero.html", "hero");
-    loadContent("/main/sections/aboutus.html", "aboutus");
-    loadContent("/main/sections/services.html", "services");
-    loadContent("/main/sections/blog.html", "blog");
-    loadContent("/main/sections/gallery.html", "gallery");
-    loadContent("/main/sections/contactus.html", "contactus");
-    loadContent("/main/sections/footer.html", "footer");
-    loadContent("/main/sections/estimating.html", "estimate");
-    loadContent("/main/sections/signups.html", "signup");
+    loadContent("/sections/header.html", "header");
+    loadContent("/sections/hero.html", "hero");
+    loadContent("/sections/aboutus.html", "aboutus");
+    loadContent("/sections/services.html", "services");
+    loadContent("/sections/blog.html", "blog");
+    loadContent("/sections/gallery.html", "gallery");
+    loadContent("/sections/contactus.html", "contactus");
+    loadContent("/sections/footer.html", "footer");
+    loadContent("/sections/estimating.html", "estimate");
+    loadContent("/sections/signups.html", "signup");
 });
 
 var activePost = 1; // Track the active blog post
