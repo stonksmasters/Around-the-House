@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        /* Reset some default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styles for the Before and After section */
+        .before-after {
+            text-align: center;
+            background-color: #333; /* Dark background */
+            padding: 40px 0;
+        }
+
+        .ba-container {
+            display: flex;
+            justify-content: space-between; /* Evenly distribute cards */
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ba-card {
+            width: 300px; /* Fixed width for each card */
+            height: 300px;
+            position: relative;
+            perspective: 1000px;
+            margin: 10px; /* Adjust spacing between cards */
+            cursor: pointer;
+        }
+
+        .ba-inner {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            transform: rotateY(0deg);
+        }
+
+        .ba-card:hover .ba-inner {
+            transform: rotateY(180deg);
+        }
+
+        .ba-front, .ba-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .ba-front img, .ba-back img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .ba-back {
+            transform: rotateY(180deg);
+            display: none; /* Initially hidden */
+        }
+
+        .ba-card:hover .ba-front {
+            display: none;
+        }
+
+        .ba-card:hover .ba-back {
+            display: block;
+        }
+
+        .ba-caption {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 10px;
+            color: #333;
+            font-size: 18px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="before-after">
+        <div class="ba-container">
+            <!-- Before and After Cards -->
+            <div class="ba-card">
+                <div class="ba-inner">
+                    <div class="ba-front">
+                        <img src="/images/before.jpg" alt="Before 1">
+                        <div class="ba-caption">Before 1</div>
+                    </div>
+                    <div class="ba-back">
+                        <img src="/images/after.jpg" alt="After 1">
+                        <div class="ba-caption">After 1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ba-card">
+                <div class="ba-inner">
+                    <div class="ba-front">
+                        <img src="/images/before.jpg" alt="Before 2">
+                        <div class="ba-caption">Before 2</div>
+                    </div>
+                    <div class="ba-back">
+                        <img src="/images/after.jpg" alt="After 2">
+                        <div class="ba-caption">After 2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ba-card">
+                <div class="ba-inner">
+                    <div class="ba-front">
+                        <img src="/images/before.jpg" alt="Before 3">
+                        <div class="ba-caption">Before 3</div>
+                    </div>
+                    <div class="ba-back">
+                        <img src="/images/after.jpg" alt="After 3">
+                        <div class="ba-caption">After 3</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+</body>
+</html>

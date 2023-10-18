@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://127.0.0.1:5500/css/main.css">
+
+    <style>
+        /* Your provided CSS styles */
+        /* ... (existing styles) ... */
+
+        /* Encasing Box Styles */
+        .container-mt5 {
+            width: 100%;
+        }
+        .carousel-box {
+            border: 4px solid #0c91d6;
+            outline: 4px solid #f46e3b;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            height: 400px;
+        }
+
+        /* Centered Title Styles */
+        .blog-title {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        /* Blog Content Styles */
+        .blog-content {
+            background-color: #fff;
+            color: #333;
+            border: 4px solid #f46e3b;
+            outline: 4px solid #0c91d6;
+            margin-top: 20px;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left;
+            display: none; /* Initially hide content */
+        }
+
+        /* Add more specific styles as needed to match your website's design */
+        .blog-image-container {
+            width: 100%;
+            text-align: center;
+        }
+
+        .blog-image-container img {
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: cover;
+            border: 4px solid #0c91d6;
+            outline: 4px solid #f46e3b;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .blog-post {
+            width: 100%;
+            border: 4px solid #f46e3b;
+            outline: 4px solid #0c91d6;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Encasing Box -->
+        <div class="carousel-box">
+            <!-- Centered Title -->
+            <div class="blog-title">
+                <h3>Latest Blog Posts</h3>
+            </div>
+            <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" onclick="toggleCarouselContent(1)">
+                        <div class="blog-image-container">
+                            <img src="/images/blogpressurewash.jpg" alt="Blog Post 1">
+                        </div>
+                        <h3>Revive Your World: The Power of Pressure Washing</h3>
+                    </div>
+                    <div class="carousel-item" onclick="toggleCarouselContent(2)">
+                        <div class="blog-image-container">
+                            <img src="/images/bloghouseclean.jpg" alt="Blog Post 2">
+                        </div>
+                        <h3>The Hidden Dangers of Dirty AC Vents</h3>
+                    </div>
+                    <!-- Add more carousel items as needed -->
+                </div>
+                <a class="carousel-control-prev" href="#blog-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#blog-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- New section for displaying blog content -->
+        <section class="blog-content" id="carousel-content-1">
+            <!-- Content for Blog Post 1 -->
+            <p>If you're like most homeowners, you probably don't give your AC vents much thought. After all, they're hidden in plain sight, and as long as your air conditioner is working correctly, why worry about them? However, neglecting your AC vents can lead to hidden dangers that can affect your health and comfort. In this blog post, we'll explore the often-overlooked issue of dirty AC vents and why you should address them.</p>
+            <!-- Add more content as needed -->
+        </section>
+        <section class="blog-content" id="carousel-content-2">
+            <!-- Content for Blog Post 2 -->
+            <p>The Hidden Dangers of Dirty AC Vents.</p>
+            <!-- Add more content as needed -->
+        </section>
+        <!-- Add more sections for additional blog posts as needed -->
+    </div>
+
+    <script>
+        var activePost = 1; // Track the active blog post
+
+        function toggleCarouselContent(postNumber) {
+            // Hide all content sections
+            $(".blog-content").hide();
+
+            // Show the content of the clicked post
+            $("#carousel-content-" + postNumber).show();
+        }
+    </script>
+</body>
+</html>

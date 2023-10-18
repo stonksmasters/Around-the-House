@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Portal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://127.0.0.1:5500/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Client Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Appointments</a></li>
+                <li><a href="#">Invoices</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Welcome to your dashboard. Here, you can view your upcoming appointments and recent invoices.</p>
+
+            <!-- Upcoming Appointments Section -->
+            <section id="upcoming-appointments">
+                <h3>Upcoming Appointments</h3>
+                <ul id="appointments-list">
+                    <!-- Inside the <li> element for each appointment -->
+<button class="expand-button">Expand</button>
+<div class="appointment-details">
+  <!-- Details of the appointment -->
+</div>
+
+                    <!-- Appointment items will be dynamically generated here -->
+                </ul>
+            </section>
+        </section>
+
+        <!-- Other Dashboard Sections (Appointments, Invoices, Profile) -->
+        <!-- Include your other dashboard sections here -->
+
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <!-- Include your JavaScript file for dynamic functionality -->
+    <script src="/js/main.js"></script>
+
+    <script>
+        // Sample hardcoded appointment data
+        const appointments = [
+            {
+                date: 'June 15, 2023',
+                service: 'House Cleaning',
+                status: 'Scheduled'
+            },
+            {
+                date: 'June 20, 2023',
+                service: 'Pressure Washing',
+                status: 'Confirmed'
+            },
+            // Add more appointment objects as needed
+        ];
+
+        // Function to render appointments
+        function renderAppointments() {
+            const appointmentsList = document.getElementById('appointments-list');
+
+            appointments.forEach((appointment) => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <strong>Appointment Date:</strong> ${appointment.date}<br>
+                    <strong>Service:</strong> ${appointment.service}<br>
+                    <strong>Status:</strong> ${appointment.status}
+                `;
+                appointmentsList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to render appointments
+        renderAppointments();
+        
+    </script>
+</body>
+</html>

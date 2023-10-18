@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estimating Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://127.0.0.1:5500/css/main.css">
+
+  
+</head>
+
+<body>
+    <header class="service-header">
+        <h1>Service Inquiry Form</h1>
+    </header>
+    <form action="http://www.aroundthehouse.world">
+        <!-- Contact Information -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" required>
+
+        <!-- Service Selection -->
+        <label>Which services are you interested in?</label>
+        <!-- Inside your form -->
+        <div class="service-radio">
+
+            <label>
+                <input type="radio" id="pressureWashing" name="service" value="Pressure Washing"
+                    aria-label="Pressure Washing" onchange="toggleServiceDetails()">
+                Pressure Washing
+            </label>
+
+            <label>
+                <input type="radio" id="houseCleaning" name="service" value="House Cleaning"
+                    aria-label="House Cleaning" onchange="toggleServiceDetails()">
+                House Cleaning
+            </label>
+
+            <label>
+                <input type="radio" id="bothServices" name="service" value="Both Services"
+                    aria-label="Both Services" onchange="toggleServiceDetails()">
+                Both Services
+            </label>
+        </div>
+
+
+        <!-- Pressure Washing Details -->
+        <div id="pressureWashingDetails" style="display: none;">
+            <h2>Pressure Washing Details</h2>
+
+            <label for="driveway">Pressure wash the driveway:</label>
+            <select id="driveway">
+                <option value="None">None</option>
+                <option value="500">500 sqft</option>
+                <option value="1000">1000 sqft</option>
+                <option value="1500">1500 sqft</option>
+                <option value="2000">2000 sqft</option>
+                <option value="2500">2500 sqft</option>
+                <option value="3000">3000 sqft</option>
+                <option value="3500">3500 sqft</option>
+                <option value="4000">4000 sqft</option>
+                <option value="4500">4500 sqft</option>
+                <option value="5000">5000+ sqft</option>
+            </select>
+
+            <label for="siding">Pressure wash the siding:</label>
+            <select id="siding">
+                <option value="None">None</option>
+                <option value="500">500 sqft</option>
+                <option value="1000">1000 sqft</option>
+                <option value="1500">1500 sqft</option>
+                <option value="2000">2000 sqft</option>
+                <option value="2500">2500 sqft</option>
+                <option value="3000">3000 sqft</option>
+                <option value="3500">3500 sqft</option>
+                <option value="4000">4000 sqft</option>
+                <option value="4500">4500 sqft</option>
+                <option value="5000">5000+ sqft</option>
+            </select>
+
+            <label for="roof">Pressure wash the roof:</label>
+            <select id="roof">
+                <option value="None">None</option>
+                <option value="500">500 sqft</option>
+                <option value="1000">1000 sqft</option>
+                <option value="1500">1500 sqft</option>
+                <option value="2000">2000 sqft</option>
+                <option value="2500">2500 sqft</option>
+                <option value="3000">3000 sqft</option>
+                <option value="3500">3500 sqft</option>
+                <option value="4000">4000 sqft</option>
+                <option value="4500">4500 sqft</option>
+                <option value="5000">5000+ sqft</option>
+            </select>
+
+            <label for="fence">Pressure wash the fence:</label>
+            <select id="fence">
+                <option value="None">None</option>
+                <option value="500">500 sqft</option>
+                <option value="1000">1000 sqft</option>
+                <option value="1500">1500 sqft</option>
+                <option value="2000">2000 sqft</option>
+                <option value="2500">2500 sqft</option>
+                <option value="3000">3000 sqft</option>
+                <option value="3500">3500 sqft</option>
+                <option value="4000">4000 sqft</option>
+                <option value="4500">4500 sqft</option>
+                <option value="5000">5000+ sqft</option>
+            </select>
+
+            <label for="patio">Pressure wash the patio:</label>
+            <select id="patio">
+                <option value="None">None</option>
+                <option value="500">500 sqft</option>
+                <option value="1000">1000 sqft</option>
+                <option value="1500">1500 sqft</option>
+                <option value="2000">2000 sqft</option>
+                <option value="2500">2500 sqft</option>
+                <option value="3000">3000 sqft</option>
+                <option value="3500">3500 sqft</option>
+                <option value="4000">4000 sqft</option>
+                <option value="4500">4500 sqft</option>
+                <option value="5000">5000+ sqft</option>
+            </select>
+
+            <label for="windows">Pressure wash windows (Enter the number of windows):</label>
+            <input type="number" id="windows" min="0">
+        </div>
+
+        <!-- House Cleaning Details -->
+        <div id="houseCleaningDetails" style="display: none;">
+            <h2>House Cleaning Details</h2>
+
+            <label for="cleaningType">What type of house cleaning do you need?</label>
+            <select id="cleaningType">
+                <option value="RegularCleaning">Regular Cleaning</option>
+                <option value="DeepCleaning">Deep Cleaning</option>
+                <option value="MoveInMoveOutCleaning">Move-In/Move-Out Cleaning</option>
+            </select>
+
+            <label for="squareFootage">Square Footage of the Home:</label>
+            <input type="number" id="squareFootage" min="0">
+
+            <label for="bedrooms">How many bedrooms need cleaning?</label>
+            <input type="number" id="bedrooms" min="0">
+
+            <label for="bathrooms">How many bathrooms need cleaning?</label>
+            <input type="number" id="bathrooms" min="0">
+
+            <label for="cleaningRequirements">Specific cleaning requirements or areas of focus:</label><br>
+            <textarea id="cleaningRequirements" rows="4"></textarea>
+        </div>
+
+        <!-- Calculate Button -->
+        <button type="button" onclick="calculateCost()">Calculate Cost</button>
+
+        <!-- Display the results -->
+        <h2>Service Costs:</h2>
+        <p id="pressureWashingResult"></p>
+        <p id="houseCleaningResult"></p>
+
+        <!-- Move this block below the service costs -->
+        <p id="bundlingSavings"></p>
+        <p id="totalCost"></p>
+    </form>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
